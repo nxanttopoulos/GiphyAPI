@@ -37,7 +37,7 @@
       // Function for dumping the JSON content for each button into the div
       function displayMovieInfo() {
         var movie = $(this).attr("data-name");
-        var queryURL = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&r=json";
+        var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&r=json";
         $.ajax({
           url: queryURL,
           method: "GET"
