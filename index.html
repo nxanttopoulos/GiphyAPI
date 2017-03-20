@@ -4,20 +4,24 @@
   <meta charset="utf-8">
   <title>Favorite Animal Giphy</title>
   <style type="text/css">
+    h1{
+      margin:auto;
+      text-align:center;
+    }
     button,
     div,
     h3,
     form,
     input {
-      margin: 5px;
+      margin: 7.5px;
     }
     #picture-view {
       display: flex;   
       flex-wrap: wrap;
       height:600px;
     }
-    body {
-      background:rgba(255,255,255,0.5);
+    html {
+      background:rgba(150,150,160,0.5);
     }
     .gif {
       height: 200px;
@@ -35,6 +39,7 @@
       <input type="text" id="giphy-input"><br>
       <input id="add-giphy" type="submit" value="Add a Giphy">
       <div id="picture-view"></div>
+      <div id="rating-view"></div>
     </form>
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script type="text/javascript">
@@ -69,31 +74,20 @@
       }
 
       function renderButtons() {
-
         $("#giphy-view").empty();
-        
         for (var i = 0; i < topics.length; i++) {
-          
           var buttons = $("<button>");
-          
           buttons.addClass("giphy");
-          
           buttons.attr("data-name", topics[i]);
-          
           buttons.text(topics[i]);
-          
           $("#giphy-view").append(buttons);
         }
       }
-      
+    
       $("#add-giphy").on("click", function(event) {
-
         event.preventDefault();
-        
         var giphy = $("#giphy-input").val().trim();
-        
         topics.push(giphy);
-        
         renderButtons();
       });
       
