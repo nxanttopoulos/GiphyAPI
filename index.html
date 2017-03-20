@@ -51,7 +51,7 @@
           var data = response.data;
           $("#picture-view").empty();
             for (var i=0; i < data.length; i++) {
-            $("#picture-view").append("<p>rating: " + data[i].rating + "</p><img src="+data[i].images.fixed_height_still.url +" class='gif' data-state='still' data-animate='"+data[i].images.fixed_height_downsampled.url+"' data-still='"+data[i].images.fixed_height_still.url+"'></img>");
+            $("#picture-view").append("<img src="+data[i].images.fixed_height_still.url +" class='gif' data-state='still' data-animate='"+data[i].images.fixed_height_downsampled.url+"' data-still='"+data[i].images.fixed_height_still.url+"'></img><p>rating: " + data[i].rating + "</p>");
             }
           $(".gif").on("click", function()  {
             var state = $(this).attr("data-state");
