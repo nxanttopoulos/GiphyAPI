@@ -1,0 +1,23 @@
+h1{
+    margin:auto;
+    text-align:center;
+}
+button,
+div,
+h3,
+form,
+input {
+    margin: 7.5px;
+}
+#picture-view {
+    display: flex;   
+    flex-wrap: wrap;
+    height:600px;
+}
+html {
+    background:rgba(150,150,160,0.5);
+}
+.gif {
+    height: 200px;
+    width: 200px;
+}
